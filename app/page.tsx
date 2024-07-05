@@ -34,11 +34,11 @@ export default function App() {
 
   function deleteTodo(id: string) {
     client.models.Todo.delete({ id })
-  }
+  } 
 
   return (
         
-    <Authenticator>
+    <Authenticator socialProviders={['google']}>
       {({ signOut, user }) => (
         <main>
           <h1>{user?.signInDetails?.loginId}'s todos</h1>
