@@ -10,6 +10,7 @@ export const auth = defineAuth({
       google: {
         clientId: secret('GOOGLE_CLIENT_ID'),
         clientSecret: secret('GOOGLE_CLIENT_SECRET'),
+        scopes: ['email'],
       },
       callbackUrls: [
         'http://localhost:3000/', 'https://main.d3k27ywis1zirg.amplifyapp.com/'
